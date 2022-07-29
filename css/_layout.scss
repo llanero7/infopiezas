@@ -40,17 +40,18 @@ header {
     }
   }
 }
-
-.nav-link {
-  color: #264E72;
-  position: relative;
-  @media (min-width: 992px) {
-    &:before {
-      content:" | ";
-      position: absolut;
-      left: 0;
-      color:#E2E2E2;
-      padding-right: 9px;
+header {
+  .nav-link {
+    color: #264E72;
+    position: relative;
+    @media (min-width: 992px) {
+      &:before {
+        content:" | ";
+        position: absolut;
+        left: 0;
+        color:#E2E2E2;
+        padding-right: 9px;
+      }
     }
   }
 }
@@ -205,6 +206,22 @@ ul.clear-list {
   &:hover {
     color: #58B9DD;
   }
+}
+
+
+/* ------------------------ TABS ----------------------------------*/
+.nav-tabs {
+  border: none !important;
+  margin-bottom: 20px;
+}
+.nav-tabs .nav-link {
+  color: #0148AD;
+  border: none;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  background-color: transparent !important;
+  border: none !important;
 }
 /* ------------------------ FOOTERR -------------------------------*/
 
