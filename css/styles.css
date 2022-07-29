@@ -1,0 +1,364 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+@media (min-width: 576px) {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  color: red;
+}
+
+@media (min-width: 992px) {
+  color: red;
+}
+
+@media (min-width: 1200px) {
+  color: red;
+}
+
+@media (min-width: 1400px) {
+  color: red;
+}
+
+body {
+  background: #F4F6FD;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.d1 {
+  background: pink;
+}
+
+.d2 {
+  background: lightblue;
+}
+
+.d3 {
+  background: lightcyan;
+}
+
+.d4 {
+  background: lightgrey;
+}
+
+.d5 {
+  background: lightcoral;
+}
+
+.d6 {
+  background: lightgreen;
+}
+
+/*
+font-family: 'Montserrat', sans-serif;
+500;600;700
+*/
+/* ------------------------ HEADER --------------------------------*/
+header {
+  background: #fff;
+  border-top: solid 8px #0148AD;
+  margin-bottom: 40px;
+}
+
+header .logo {
+  width: 210px;
+}
+
+.navbar {
+  padding: 15px 0;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .navbar {
+    text-align: left;
+  }
+}
+
+.navbar li {
+  padding: 3px 0;
+}
+
+@media (min-width: 992px) {
+  .navbar li {
+    padding: 0;
+  }
+}
+
+.nav-link {
+  color: #264E72;
+}
+
+.navbar-nav .nav-link.active {
+  color: #0148AD;
+}
+
+.blue-btn {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .blue-btn {
+    width: 120px;
+  }
+}
+
+.blue-btn a {
+  background: #0148AD;
+  padding: 10px 70px;
+  border-radius: 6px;
+  color: #fff;
+  /* display: inline-block; */
+  text-align: center;
+  margin-top: -3px;
+}
+
+.blue-btn a:hover {
+  background: #016BAD;
+  color: #fff;
+}
+
+/* ------------------------ LOGIN -------------------------------*/
+.login-wrapper .white-box {
+  padding: 40px 60px 10px 60px;
+  border-radius: 15px;
+}
+
+.login-wrapper h2 {
+  color: #0148AD;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-wrapper input[type="email"],
+.login-wrapper input[type="password"] {
+  height: 50px;
+}
+
+.login-wrapper button {
+  padding: 14px;
+  background: #0148AD;
+}
+
+.login-wrapper button:hover {
+  background: #135BC1;
+}
+
+/* ------------------------ CONTENT -------------------------------*/
+h1 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #264E72;
+}
+
+.border-bottom {
+  border-bottom: solid 2px #F1F3F6 !important;
+  padding-bottom: 13px;
+  margin-bottom: 15px;
+}
+
+.white-box {
+  background: #fff;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+}
+
+.check-list li {
+  margin-bottom: 15px;
+  font-weight: 300;
+  padding-left: 45px;
+  background: url("../img/check-icon.svg") no-repeat 0 0;
+  background-size: 35px;
+}
+
+/* ------------------------ FOOTERR -------------------------------*/
+footer {
+  text-align: center;
+  font-size: 14px;
+  background: #F4F6FD;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  footer {
+    position: absolute;
+    bottom: 0;
+    padding-top: 20px;
+  }
+}
+
+.footer-nav {
+  margin-bottom: 8px;
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active,
+select {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+a {
+  text-decoration: none;
+  color: #0148AD;
+}
+
+a:hover {
+  color: #0148AD;
+}
+
+a.eye-icon {
+  background: url("../img/eye-icon.svg") no-repeat right 3px;
+  padding: 4px 25px 4px 0;
+  background: url(../img/eye-icon.svg) no-repeat right 3px;
+  padding: 4px 34px 4px 0;
+}
+
+/*
+Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+*/
+@media only screen and (max-width: 760px), (min-device-width: 761px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr,
+  .responsive-table.clients thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    margin: 0 0 1rem 0;
+  }
+  tr:nth-child(odd) {
+    background: #f8fafd;
+  }
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before,
+  .responsive-table.clients td:before {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  /*
+    Label the data
+
+You could also use a data-* attribute and content for this. 
+That way "bloats" the HTML, this way means you need to keep 
+HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+    */
+  td:nth-of-type(1):before {
+    content: "Nombre";
+    font-weight: bold;
+  }
+  td:nth-of-type(2):before {
+    content: "Usuario";
+    font-weight: bold;
+  }
+  td:nth-of-type(3):before {
+    content: "Creación";
+    font-weight: bold;
+  }
+  td:nth-of-type(4):before {
+    content: "Rol";
+    font-weight: bold;
+  }
+  td:nth-of-type(5):before {
+    content: "Acciones";
+    font-weight: bold;
+  }
+}
+
+.responsive-table.clients td:nth-of-type(1):before {
+  content: "Nombre";
+  font-weight: bold;
+}
+
+.responsive-table.clients td:nth-of-type(2):before {
+  content: "Creación";
+  font-weight: bold;
+}
+
+.responsive-table.clients td:nth-of-type(3):before {
+  content: "Formularios";
+  font-weight: bold;
+}
+
+.responsive-table.clients td:nth-of-type(4):before {
+  content: "Estatus";
+  font-weight: bold;
+}
+
+.responsive-table.clients td:nth-of-type(5):before {
+  content: "Desembolso";
+  font-weight: bold;
+}
+
+.responsive-table.clients td:nth-of-type(6):before {
+  content: "Acciones";
+  font-weight: bold;
+}
+
+@media (min-width: 760px) {
+  .responsive-table.clients td:before {
+    display: none;
+  }
+}
+
+.responsive-table {
+  width: 100%;
+}
+
+tr {
+  padding: 17px;
+}
+
+@media (min-width: 768px) {
+  .responsive-table tbody tr {
+    background: #f8fafd;
+  }
+  .responsive-table td,
+  .responsive-table th {
+    padding: 12px;
+    border-bottom: solid 6px #fff;
+  }
+  .responsive-table tr {
+    padding: 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
