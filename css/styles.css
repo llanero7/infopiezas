@@ -1,25 +1,20 @@
-@charset "UTF-8";
+/* 
+@media (min-width: 576px) { color: red;}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { color: red; }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { color: red; }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { color: red; }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { color: red; }
+
+*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
-@media (min-width: 576px) {
-  color: red;
-}
-
-@media (min-width: 768px) {
-  color: red;
-}
-
-@media (min-width: 992px) {
-  color: red;
-}
-
-@media (min-width: 1200px) {
-  color: red;
-}
-
-@media (min-width: 1400px) {
-  color: red;
-}
-
 body {
   background: #F4F6FD;
   font-family: 'Montserrat', sans-serif;
@@ -88,6 +83,24 @@ header .logo {
 
 .nav-link {
   color: #264E72;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .nav-link:before {
+    content: " | ";
+    position: absolut;
+    left: 0;
+    color: #E2E2E2;
+    padding-right: 9px;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav .nav-item:first-child a:before,
+  .navbar-nav .nav-item:last-child a:before {
+    display: none;
+  }
 }
 
 .navbar-nav .nav-link.active {
@@ -101,6 +114,7 @@ header .logo {
 @media (min-width: 992px) {
   .blue-btn {
     width: 120px;
+    margin-left: 10px;
   }
 }
 
@@ -117,6 +131,12 @@ header .logo {
 .blue-btn a:hover {
   background: #016BAD;
   color: #fff;
+}
+
+.navbar-toggler {
+  border: none;
+  font-size: 30px;
+  color: #0148AD;
 }
 
 /* ------------------------ LOGIN -------------------------------*/
@@ -139,6 +159,7 @@ header .logo {
 .login-wrapper button {
   padding: 14px;
   background: #0148AD;
+  border: none;
 }
 
 .login-wrapper button:hover {
@@ -147,12 +168,29 @@ header .logo {
 
 /* ------------------------ CONTENT -------------------------------*/
 h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+
+h2 {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 h3 {
   font-size: 1.5rem;
   color: #264E72;
+}
+
+h5 {
+  font-size: 1.1rem;
+  color: #6C6C6C;
 }
 
 .border-bottom {
@@ -178,6 +216,44 @@ h3 {
   background-size: 35px;
 }
 
+ul.clear-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brand-box {
+  height: 100%;
+}
+
+.suppier-logo {
+  text-align: center;
+  -webkit-box-shadow: 0px 0px 46px #E9ECF8;
+          box-shadow: 0px 0px 46px #E9ECF8;
+  margin-right: 20px;
+}
+
+.suppier-logo img {
+  width: 80%;
+}
+
+.light-gray {
+  color: #BABCC1;
+  padding: 0 15px;
+}
+
+.blue-text {
+  color: #0148AD;
+}
+
+.light-blue {
+  color: #25ACDE;
+}
+
+.light-blue:hover {
+  color: #58B9DD;
+}
+
 /* ------------------------ FOOTERR -------------------------------*/
 footer {
   text-align: center;
@@ -190,14 +266,21 @@ footer {
 
 @media (min-width: 992px) {
   footer {
-    position: absolute;
-    bottom: 0;
     padding-top: 20px;
   }
 }
 
 .footer-nav {
   margin-bottom: 8px;
+}
+
+.contact-table strong {
+  display: block;
+  width: 120px;
+}
+
+.contact-table td {
+  padding: 5px 0;
 }
 
 textarea:hover,
@@ -225,7 +308,7 @@ a {
 }
 
 a:hover {
-  color: #0148AD;
+  color: #2E86BE;
 }
 
 a.eye-icon {
@@ -233,132 +316,5 @@ a.eye-icon {
   padding: 4px 25px 4px 0;
   background: url(../img/eye-icon.svg) no-repeat right 3px;
   padding: 4px 34px 4px 0;
-}
-
-/*
-Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
-*/
-@media only screen and (max-width: 760px), (min-device-width: 761px) and (max-device-width: 1024px) {
-  /* Force table to not be like tables anymore */
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
-  }
-  /* Hide table headers (but not display: none;, for accessibility) */
-  thead tr,
-  .responsive-table.clients thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-  tr {
-    margin: 0 0 1rem 0;
-  }
-  tr:nth-child(odd) {
-    background: #f8fafd;
-  }
-  td {
-    border: none;
-    position: relative;
-    padding-left: 50%;
-  }
-  td:before,
-  .responsive-table.clients td:before {
-    position: absolute;
-    top: 0;
-    left: 6px;
-    width: 45%;
-    padding-right: 10px;
-    white-space: nowrap;
-  }
-  /*
-    Label the data
-
-You could also use a data-* attribute and content for this. 
-That way "bloats" the HTML, this way means you need to keep 
-HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
-    */
-  td:nth-of-type(1):before {
-    content: "Nombre";
-    font-weight: bold;
-  }
-  td:nth-of-type(2):before {
-    content: "Usuario";
-    font-weight: bold;
-  }
-  td:nth-of-type(3):before {
-    content: "Creación";
-    font-weight: bold;
-  }
-  td:nth-of-type(4):before {
-    content: "Rol";
-    font-weight: bold;
-  }
-  td:nth-of-type(5):before {
-    content: "Acciones";
-    font-weight: bold;
-  }
-}
-
-.responsive-table.clients td:nth-of-type(1):before {
-  content: "Nombre";
-  font-weight: bold;
-}
-
-.responsive-table.clients td:nth-of-type(2):before {
-  content: "Creación";
-  font-weight: bold;
-}
-
-.responsive-table.clients td:nth-of-type(3):before {
-  content: "Formularios";
-  font-weight: bold;
-}
-
-.responsive-table.clients td:nth-of-type(4):before {
-  content: "Estatus";
-  font-weight: bold;
-}
-
-.responsive-table.clients td:nth-of-type(5):before {
-  content: "Desembolso";
-  font-weight: bold;
-}
-
-.responsive-table.clients td:nth-of-type(6):before {
-  content: "Acciones";
-  font-weight: bold;
-}
-
-@media (min-width: 760px) {
-  .responsive-table.clients td:before {
-    display: none;
-  }
-}
-
-.responsive-table {
-  width: 100%;
-}
-
-tr {
-  padding: 17px;
-}
-
-@media (min-width: 768px) {
-  .responsive-table tbody tr {
-    background: #f8fafd;
-  }
-  .responsive-table td,
-  .responsive-table th {
-    padding: 12px;
-    border-bottom: solid 6px #fff;
-  }
-  .responsive-table tr {
-    padding: 0;
-  }
 }
 /*# sourceMappingURL=styles.css.map */

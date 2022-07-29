@@ -43,15 +43,41 @@ header {
 
 .nav-link {
   color: #264E72;
+  position: relative;
+  @media (min-width: 992px) {
+    &:before {
+      content:" | ";
+      position: absolut;
+      left: 0;
+      color:#E2E2E2;
+      padding-right: 9px;
+    }
+  }
 }
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    .nav-item:first-child,
+    .nav-item:last-child  {
+      a {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }  
+}
+
 
 .navbar-nav .nav-link.active {
   color: #0148AD;
 }
 .blue-btn {
   width: 100%;
+ 
   @media (min-width: 992px) {
     width: 120px;
+    margin-left: 10px;
   }
   a {
     background: #0148AD;
@@ -67,6 +93,14 @@ header {
     }
   }
 }
+
+
+.navbar-toggler {
+  border: none;
+  font-size: 30px;
+  color: #0148AD;
+}
+
 
 /* ------------------------ LOGIN -------------------------------*/
 
@@ -87,6 +121,7 @@ header {
   button {
     padding: 14px;
     background: #0148AD;
+    border: none;
     &:hover {
       background: #135BC1;
     }
@@ -96,12 +131,26 @@ header {
 
 /* ------------------------ CONTENT -------------------------------*/
 h1 {
+  font-size: 1.2rem;
+  @media (min-width: 992px) {
+    font-size: 1.6rem;
+  }
+  font-weight: 600;
+}
+h2 {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 h3 {
   font-size: 1.5rem;
   color: #264E72;
 }
+
+h5 {
+  font-size: 1.1rem;
+  color: #6C6C6C;
+}
+
 .border-bottom {
   border-bottom: solid 2px #F1F3F6 !important;
   padding-bottom: 13px;
@@ -123,6 +172,40 @@ h3 {
     background-size: 35px;
   }
 }
+
+
+ul.clear-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brand-box {
+  height: 100%;
+}
+
+.suppier-logo {
+  text-align: center;
+  box-shadow: 0px 0px 46px #E9ECF8;
+  margin-right: 20px;
+  img {
+    width: 80%;
+  }
+}
+.light-gray {
+  color: #BABCC1;
+  padding: 0 15px;
+}
+
+.blue-text {
+  color: #0148AD;
+}
+.light-blue {
+  color: #25ACDE;
+  &:hover {
+    color: #58B9DD;
+  }
+}
 /* ------------------------ FOOTERR -------------------------------*/
 
 footer {
@@ -133,8 +216,6 @@ footer {
   padding-bottom: 40px;
   width: 100%;
   @media (min-width: 992px) {
-    position: absolute;
-    bottom: 0;
     padding-top: 20px;
   }
 }
@@ -142,12 +223,15 @@ footer {
   margin-bottom: 8px;
 }
 
-
-
-
-
-
-
+.contact-table {
+  strong {
+    display: block;
+    width: 120px;
+  }
+  td {
+    padding: 5px 0;
+  }
+}
 
 
 
@@ -164,16 +248,16 @@ label:focus,
 .btn:active,
 .btn.active,
 select {
-  outline: 0px !important;
-  -webkit-appearance: none;
-  box-shadow: none !important;
+outline: 0px !important;
+-webkit-appearance: none;
+box-shadow: none !important;
 }
 
 a {
   text-decoration: none;
   color: #0148AD;
   &:hover {
-    color: #0148AD;
+    color: #2E86BE;
   }
   &.eye-icon {
     background: url("../img/eye-icon.svg") no-repeat right 3px;
