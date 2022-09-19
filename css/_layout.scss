@@ -253,8 +253,6 @@ footer {
   }
 }
 
-
-
 textarea:hover,
 input:hover,
 textarea:active,
@@ -286,4 +284,29 @@ a {
     background: url(../img/eye-icon.svg) no-repeat right 3px;
     padding: 4px 34px 4px 0;
   }
+}
+
+.btn-primary {
+  background: #0148AD;
+  padding: 10px 30px;
+  border: none;
+}
+
+.form-label {
+  margin-bottom: 0.1rem;
+}
+
+input.form-control,
+.form-select{
+  line-height: 2 !important;
+
+}
+
+.map-holder iframe{
+  width: 100%;
+}
+
+.contact-section .white-box {
+  height: 100%;
+
 }

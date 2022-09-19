@@ -17,7 +17,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 body {
   background: #F4F6FD;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
@@ -55,7 +55,6 @@ header {
   border-top: solid 8px #0148AD;
   margin-bottom: 40px;
 }
-
 header .logo {
   width: 210px;
 }
@@ -64,17 +63,14 @@ header .logo {
   padding: 15px 0;
   text-align: center;
 }
-
 @media (min-width: 992px) {
   .navbar {
     text-align: left;
   }
 }
-
 .navbar li {
   padding: 3px 0;
 }
-
 @media (min-width: 992px) {
   .navbar li {
     padding: 0;
@@ -85,7 +81,6 @@ header .nav-link {
   color: #264E72;
   position: relative;
 }
-
 @media (min-width: 992px) {
   header .nav-link:before {
     content: " | ";
@@ -98,11 +93,10 @@ header .nav-link {
 
 @media (min-width: 992px) {
   .navbar-nav .nav-item:first-child a:before,
-  .navbar-nav .nav-item:last-child a:before {
+.navbar-nav .nav-item:last-child a:before {
     display: none;
   }
 }
-
 .navbar-nav .nav-link.active {
   color: #0148AD;
 }
@@ -110,14 +104,12 @@ header .nav-link {
 .blue-btn {
   width: 100%;
 }
-
 @media (min-width: 992px) {
   .blue-btn {
     width: 120px;
     margin-left: 10px;
   }
 }
-
 .blue-btn a {
   background: #0148AD;
   padding: 10px 70px;
@@ -127,7 +119,6 @@ header .nav-link {
   text-align: center;
   margin-top: -3px;
 }
-
 .blue-btn a:hover {
   background: #016BAD;
   color: #fff;
@@ -144,24 +135,20 @@ header .nav-link {
   padding: 40px 60px 10px 60px;
   border-radius: 15px;
 }
-
 .login-wrapper h2 {
   color: #0148AD;
   text-align: center;
   margin-bottom: 20px;
 }
-
-.login-wrapper input[type="email"],
-.login-wrapper input[type="password"] {
+.login-wrapper input[type=email],
+.login-wrapper input[type=password] {
   height: 50px;
 }
-
 .login-wrapper button {
   padding: 14px;
   background: #0148AD;
   border: none;
 }
-
 .login-wrapper button:hover {
   background: #135BC1;
 }
@@ -171,7 +158,6 @@ h1 {
   font-size: 1.2rem;
   font-weight: 600;
 }
-
 @media (min-width: 992px) {
   h1 {
     font-size: 1.6rem;
@@ -207,7 +193,6 @@ h5 {
   list-style: none;
   padding: 0;
 }
-
 .check-list li {
   margin-bottom: 15px;
   font-weight: 300;
@@ -228,11 +213,9 @@ ul.clear-list {
 
 .suppier-logo {
   text-align: center;
-  -webkit-box-shadow: 0px 0px 46px #E9ECF8;
-          box-shadow: 0px 0px 46px #E9ECF8;
+  box-shadow: 0px 0px 46px #E9ECF8;
   margin-right: 20px;
 }
-
 .suppier-logo img {
   width: 80%;
 }
@@ -249,7 +232,6 @@ ul.clear-list {
 .light-blue {
   color: #25ACDE;
 }
-
 .light-blue:hover {
   color: #58B9DD;
 }
@@ -280,7 +262,6 @@ footer {
   padding-bottom: 40px;
   width: 100%;
 }
-
 @media (min-width: 992px) {
   footer {
     padding-top: 20px;
@@ -295,7 +276,6 @@ footer {
   display: block;
   width: 120px;
 }
-
 .contact-table td {
   padding: 5px 0;
 }
@@ -315,23 +295,42 @@ label:focus,
 select {
   outline: 0px !important;
   -webkit-appearance: none;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 a {
   text-decoration: none;
   color: #0148AD;
 }
-
 a:hover {
   color: #2E86BE;
 }
-
 a.eye-icon {
   background: url("../img/eye-icon.svg") no-repeat right 3px;
   padding: 4px 25px 4px 0;
   background: url(../img/eye-icon.svg) no-repeat right 3px;
   padding: 4px 34px 4px 0;
 }
-/*# sourceMappingURL=styles.css.map */
+
+.btn-primary {
+  background: #0148AD;
+  padding: 10px 30px;
+  border: none;
+}
+
+.form-label {
+  margin-bottom: 0.1rem;
+}
+
+input.form-control,
+.form-select {
+  line-height: 2 !important;
+}
+
+.map-holder iframe {
+  width: 100%;
+}
+
+.contact-section .white-box {
+  height: 100%;
+}/*# sourceMappingURL=styles.css.map */
